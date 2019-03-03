@@ -1,3 +1,16 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Report
+% LaTeX Template
+%
+% Author:
+% Sourqe
+%
+% MIT License
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\HWrule}{\rule{\linewidth}{0.5mm}}
+
 \begin{titlepage}
 
 %----------------------------------------------------------------------------------------
@@ -14,16 +27,35 @@
 \course{}
 \university{}
 \department{}
-\end{center}
 
 %----------------------------------------------------------------------------------------
 %	TITLE SECTION
 %----------------------------------------------------------------------------------------
 
+\HWrule \\[0.3cm]
+    { \huge \bfseries \reporttitle}\\ 
+\HWrule \\[1.0cm]
+\end{center}
 
 %----------------------------------------------------------------------------------------
 %	AUTHOR SECTION
 %----------------------------------------------------------------------------------------
 
+\begin{flushright} \large
+    \textit{Authors:}\\
+    
+    \authorOne~[\sIDOne]\\ 
+    \authorTwo~[\sIDTwo]
+\end{flushright}
+
+\vspace{4cm}
+
+\makeatletter
+
+Date: \@date 
+
+\vfill 
+
+\makeatother
 
 \end{titlepage}
