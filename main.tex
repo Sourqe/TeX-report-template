@@ -1,42 +1,75 @@
 %----------------------------------------------------------------------------------------
-%	DOCUMENT CONFIGURATION
-%---------------------------------------------------------------------------------------
-\documentclass[12pt,twoside,letterpaper]{article}
+%    PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
 
-\input{template/commands.tex}
+\documentclass[11pt]{template/report} % Font size (can be 10pt, 11pt or 12pt)
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
 
-% TITLES
-\newcommand{\logo}{\includegraphics[width = 15cm]{images/logo/TUe.png}\\[1.0cm]}
-\newcommand{\course}{\textbf{\textsc{\Large Course code - Course Title}}\\[1.0cm]}
-\newcommand{\university}{\textsc{\Large Eindhoven University of Technology}\\[0.5cm]}
-\newcommand{\department}{\textsc{\large Department of Mathematics and Computer Science}\\[0.95cm]}
-\newcommand{\reporttitle}{Report}
+%\fancyhead[LO,RO]{Student name (Student ID)}
+%\fancyfoot[LO,RO]{\thepage}
+ 
+\usepackage{multirow}
+\usepackage[table,xcdraw]{xcolor} 
+\usepackage{lipsum}  
+ 
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
 
-% AUTHORS
-\newcommand{\authorOne}{Author 1}
-\newcommand{\sIDOne}{000000}
-\newcommand{\authorTwo}{Author 2}
-\newcommand{\sIDTwo}{000000}
+%----------------------------------------------------------------------------------------
+%    TITLE SECTION
+%----------------------------------------------------------------------------------------
+\title{\textbf{Report title} \\[0.5cm]
+{\Large Course name (Course code) \\[1.0cm]
+         \large \textit{Department of Mathematics and Computer Science \\[0.3cm]
+                Eindhoven University of Technology \\[0.6cm]
+         \small \today}}}
 
+\author{\textbf{
+            Student name (Student ID)\\[0.1cm]
+            Student name (Student ID)\\[0.1cm]
+            Student name (Student ID)\\[0.1cm]
+            Student name (Student ID)}}
+
+\date{\today}
+%----------------------------------------------------------------------------------------
 \begin{document}
 
+\thispagestyle{empty}
+
+\maketitle
 %----------------------------------------------------------------------------------------
-%	Title page
-%---------------------------------------------------------------------------------------
-
-\input{template/titlepage.tex}
-
+%    BODY
 %----------------------------------------------------------------------------------------
-%	Table of Contents
-%---------------------------------------------------------------------------------------
-
-\tableofcontents
 \newpage
 
-%----------------------------------------------------------------------------------------
-%	Start document
-%---------------------------------------------------------------------------------------
-
 \section{Introduction}
+    
+    \lipsum[1]
+    
+    \subsection{Introduction}
+    
+        \lipsum[2-3]
+        
+        \subsubsection*{Introduction}
+        
+            \lipsum[4]
+        
+    \subsection{Conclusion}
+    
+        \lipsum[5]
+        
+        \paragraph{Discussion} \lipsum[6]
+        
+%----------------------------------------------------------------------------------------
+%    BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+\newpage
+\bibliographystyle{unsrt}
 
+\bibliography{sources.bib}
+%----------------------------------------------------------------------------------------
 \end{document}
